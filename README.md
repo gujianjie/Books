@@ -31,4 +31,4 @@ Data: 2017-08-23T00:00:00.000Z
   * Signatures of ASW or DS block are stored in corresponding Epilog area. The signature is generated with the corresponding PrivateKey stored in the backend KMS server or offline eToken.
 
 ![](/assets/new_static.png)
-
+---
