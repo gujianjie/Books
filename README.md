@@ -1,3 +1,12 @@
-# My Awesome Book
+# UAES Secure Flashing Solution Improvement
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+* Motivation
+  * Further sercured flashing improvement 
+  * Minize technical gap between RB solution
+
+* Key Points：
+  * Public Key -&gt; CVC
+  * 1-Level Signature Verification -&gt; 2-Level Signature Verification
+
+
+
