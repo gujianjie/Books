@@ -1,7 +1,6 @@
 # UAES Secured Flashing Improvement \(MG1U Platform\)
 
 * Motivation
-
   * Further sercured flashing improvement 
   * Minize technical gap between RB solution
   
