@@ -25,6 +25,7 @@ Data: 2017-08-23T00:00:00.000Z
 
   * Only 1 Public Key is stored in the BootCtrl area
   * Signatures of ASW or DS block are stored in corresponding Epilog area. The signature is generated with the corresponding PrivateKey stored in the backend KMS server or offline eToken.
+  
 
 * Static design of signature in old solution
   ![](/assets/old_static.png)
@@ -36,6 +37,7 @@ Data: 2017-08-23T00:00:00.000Z
 * New solution
   * Only 1 Public Key is stored in the BootCtrl area.
   * Signatures of ASW or DS block are stored in corresponding Epilog area. The signature is generated with the corresponding PrivateKey stored in the backend KMS server or offline eToken.
+
 
 * Static design in new solution
   ![](/assets/new_static.png)
