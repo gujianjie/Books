@@ -65,12 +65,16 @@ Data: 2017-08-23T00:00:00.000Z
   * A RootCVC certification is stored in the Epilog of BootCtrl. The RootCVC certification is a self-signd certification. The RootPublicKey is included in the RootCVC.
   * A ProjectCVC(with ProjectPublicKey) is stroed in the Epiloog of CB/ASW/DS. The ProjectCVC is signed by the backend KMS with the RootPrivateKey. RootPrivateKey is the paired private key of RootPublicKey
   * Signature of CB/ASW/DS block is stored in corresponding Epilog area. The signature is generated with the ProjectPrivateKey stored in the backend KMS server or offline eToken.
+  
 
 * **Dynamic design of signature verification in the new solution**
 
   * No change in the 5-step download process
   * No change in the TransferData process
-  
-  * Detailed TransferExit process in the new solution
+  * Detailed in TransferExit process in the new solution
+    * BootCtrl/CB gets RootCVC certification stored in the Bootctrl's Epilog according to the defined Epilog structure.
+    * BootCtrl/CB extracts RootPublicKey from RootCVC according the CVC encoding format(TLV)
+    * Signature stored in the Epilog, which has been programmed into Flash in TranferData process, with the root public key
+    * If the Signature is valid, the ValidPattern, which has been temporarily stored in ram in the TransferData process, will be programmed into Flash. Otherwise, the flashing process is aborted. The corresponding block will marked as invalid in the next PowerOn Test.
 
   ![](/assets/dynamic_transferExit_process_new.png)
