@@ -72,11 +72,9 @@ Data: 2017-08-23T00:00:00.000Z
   * No change in the 5-step download process
   * No change in the TransferData process
   * Detailed in TransferExit process in the new solution
-    * BootCtrl/CB gets RootCVC certification stored in the Bootctrl's Epilog according to the defined Epilog structure
-    * BootCtrl/CB extracts RootPublicKey from RootCVC according the CVC encoding format (TLV)
-    * BootCtrl/CB verifies the ProjectPublicCVC with the RootPublicKey. Additionally, CB can also check the project related informations, e.g. project ID， Ecu Name, etc., in the ProjectCVC of ASW/DS with its own CBProjectCVC, for compatiblity purpose. (See detailed CVC design)
-    * If the ProjectCVC is valid, ProjectPublicKey can be extracted from  ProjectCVC  accroding to the CVC encoding format (TLV)
-    * BootCtrl/CB verifies Signature stored in the Epilog, which has been programmed into Flash in TranferData process, with ProjectPubicKey
+    * BootCtrl/CB gets RootCVC certification stored in the Bootctrl's Epilog according to the defined Epilog structure.
+    * BootCtrl/CB extracts RootPublicKey from RootCVC according the CVC encoding format(TLV)
+    * Signature stored in the Epilog, which has been programmed into Flash in TranferData process, with the root public key
     * If the Signature is valid, the ValidPattern, which has been temporarily stored in ram in the TransferData process, will be programmed into Flash. Otherwise, the flashing process is aborted. The corresponding block will marked as invalid in the next PowerOn Test.
 
   ![](/assets/dynamic_transferExit_process_new.png)
