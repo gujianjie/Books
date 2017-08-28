@@ -58,7 +58,7 @@ Data: 2017-08-23T00:00:00.000Z
 
 #### _New Solution_
 
-* **Static design in new solution**
+* **Static design in the new solution**
 
   ![](/assets/new_static.png)
   
@@ -66,10 +66,11 @@ Data: 2017-08-23T00:00:00.000Z
   * A ProjectCVC(with ProjectPublicKey) is stroed in the Epiloog of CB/ASW/DS. The ProjectCVC is signed by the backend KMS with the RootPrivateKey. RootPrivateKey is the paired private key of RootPublicKey
   * Signature of CB/ASW/DS block is stored in corresponding Epilog area. The signature is generated with the ProjectPrivateKey stored in the backend KMS server or offline eToken.
 
+* **Dynamic design of signature verification in the new solution**
 
+  * No change in the 5-step download process
+  * No change in the TransferData process
+  
+  * Detailed TransferExit process in the new solution
 
-
-* Dynamic design of signature verification in new solution
-
-
-
+  ![](/assets/dynamic_transferExit_process_new.png)
