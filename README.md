@@ -72,7 +72,7 @@ Data: 2017-08-23T00:00:00.000Z
   * No change in the TransferData process
   * Detailed in TransferExit process in the new solution
     * BootCtrl/CB gets RootCVC certification stored in the Bootctrl's Epilog according to the defined Epilog structure.
-    * BootCtrl/CB extracts RootPublicKey from RootCVC according the CVC encoding format\(TLV\)
+    * BootCtrl/CB extracts RootPublicKey from RootCVC according the CVC encoding format\(ASN.1\)
     * BootCtrl/CB verifies the ProjectCVC stored in the Epliog of CB/ASW/DS with the RootPublicKey  \(CB can only verifies ProjectCVC of ASW/DS\). Additionally, CB can also checks the project related tags \(e.g. Project Id or SubjectName\) in the ProjectCVC of ASW/DS with its own CBProjectCVC for compatiblity purpose. \(See detaild CVC design\)
     * If ProjectCVC is valid, BootCtrl/CB can extract the ProjectPublicKey for ProjectCVC, and trust it for further usage. Otherwise, the flashing process is aborted.
     * BootCtrl/CB verifies the Signature stored in the Epilog, which has been programmed into Flash in TranferData process, with the ProjectPublicKey.
