@@ -51,7 +51,7 @@ Data: 2017-08-23T00:00:00.000Z
   * Detailed in TransferExit process
     * BootCtrl/CB gets root public key stored in the Bootctrl via InfoTab of BootCtrl
     * BootCtrl/CB verfies Signature stored in the Epilog, which has been programmed into Flash in TranferData process, with the root public key
-    * If the Signature is valid, the ValidPattern, which has been temporarily stored in ram in the TransferData process, will be programmed into Flash. Otherwise, the flashing process is aborted. The corresponding block will marked as invalid in the next PowerOn Test.
+    * If the Signature is valid, the ValidPattern, which has been temporarily stored in ram in the TransferData process, will be programmed into Flash. Otherwise, the flashing process is aborted. The corresponding block will be marked as invalid in the next PowerOn Test.
     
   ![](/assets/dynamic_transferExit_process.png)
 ---
@@ -74,7 +74,9 @@ Data: 2017-08-23T00:00:00.000Z
   * Detailed in TransferExit process in the new solution
     * BootCtrl/CB gets RootCVC certification stored in the Bootctrl's Epilog according to the defined Epilog structure.
     * BootCtrl/CB extracts RootPublicKey from RootCVC according the CVC encoding format(TLV)
-    * Signature stored in the Epilog, which has been programmed into Flash in TranferData process, with the root public key
-    * If the Signature is valid, the ValidPattern, which has been temporarily stored in ram in the TransferData process, will be programmed into Flash. Otherwise, the flashing process is aborted. The corresponding block will marked as invalid in the next PowerOn Test.
+    * BootCtrl/CB verifies the ProjectCVC stored in the Epliog of CB/ASW/DS with the RootPublicKey  (CB can only verifies ProjectCVC of ASW/DS). Additionally, CB can also checks the project related tags (e.g. Project Id or SubjectName) in the ProjectCVC of ASW/DS with its own CBProjectCVC for compatiblity purpose. (See detaild CVC design)
+    * If ProjectCVC is valid, BootCtrl/CB can extract the ProjectPublicKey for ProjectCVC, and trust it for further usage. Otherwise, the flashing process is aborted.
+    * BootCtrl/CB verifies the Signature stored in the Epilog, which has been programmed into Flash in TranferData process, with the ProjectPublicKey.
+    * If the Signature is valid, the ValidPattern, which has been temporarily stored in ram in the TransferData process, will be programmed into Flash. Otherwise, the flashing process is aborted. The corresponding block will be marked as invalid in the next PowerOn Test.
 
   ![](/assets/dynamic_transferExit_process_new.png)
