@@ -72,7 +72,7 @@ Data: 2017-08-23T00:00:00.000Z
   * No change in the TransferData process
   * Detailed in TransferExit process in the new solution
     * BootCtrl/CB gets RootCVC certification stored in the Bootctrl's Epilog according to the defined Epilog structure.
-    * BootCtrl/CB extracts RootPublicKey from RootCVC according the CVC encoding format\(ASN.1\)
+    * BootCtrl/CB extracts RootPublicKey from RootCVC according the CVC data structure\(ASN.1\)
     * BootCtrl/CB verifies the ProjectCVC stored in the Epliog of CB/ASW/DS with the RootPublicKey  \(CB can only verifies ProjectCVC of ASW/DS\). Additionally, CB can also checks the project related tags \(e.g. Project Id or SubjectName\) in the ProjectCVC of ASW/DS with its own CBProjectCVC for compatiblity purpose. \(See detaild CVC design\)
     * If ProjectCVC is valid, BootCtrl/CB can extract the ProjectPublicKey for ProjectCVC, and trust it for further usage. Otherwise, the flashing process is aborted.
     * BootCtrl/CB verifies the Signature stored in the Epilog, which has been programmed into Flash in TranferData process, with the ProjectPublicKey.
@@ -82,10 +82,17 @@ Data: 2017-08-23T00:00:00.000Z
 
 * **Detailed CV design**
 
-    The storage in the embedded ECUs is normally limitied, so X.509 certificates are not used, CV certificates according to ISO-7816 is used instead. The certificate profile is specified in the following table.
-  
-  
+  The storage in the embedded ECUs is normally limitied, so X.509 certificates are not used, CV certificates according to ISO-7816 is used instead. The certificate profile is specified in the following table.
+
   ![](/assets/CVC_Profile.png)
 
- ![](/assets/Overview_dataObject_CVC.png)
+  The encoding of data structures defined in ASN.1 is described in X.690. The tags,lengths,and values used in the CVC is defined in the following table.
+
+  ![](/assets/Overview_dataObject_CVC.png)
+
+  * Example of CVC
+
+  ![](/assets/Example_RootCVC_RB.png)
+
+
 
