@@ -82,19 +82,21 @@ Data: 2017-08-23T00:00:00.000Z
 
 * **Detailed CV design**
 
-  The storage in the embedded ECUs is normally limitied, so X.509 certificates are not used, CV certificates according to ISO-7816 is used instead. The certificate profile is specified in the following table.![](/assets/CVC_Profile_overview.png)
-
-* ![](/assets/CVC_Profile_overview.png)
+  The storage in the embedded ECUs is normally limitied, so X.509 certificates are not used, CV certificates according to ISO-7816 is used instead. The certificate profile is specified in the following table.
+  
+![](/assets/CVC_Profile_overview.png)
 
 The encoding of data structures defined in ASN.1 is described in X.690. The tags,lengths,and values used in the CVC is defined in the following table.
 
  ![](/assets/Overview_dataObject_CVC.png)
  
+ The publick key profile consists of Object Identifer, Composite modulus and Public exponent.
+ 
  ![](/assets/PublicKey_Profile.png)
 
-* **Example of CVC**
+* **Example of CVC - RootCVC**
 
-  ![](/assets/Example_RootCVC_RB.png)
+![](/assets/Example_RootCVC_RB.png)
 
 
 
