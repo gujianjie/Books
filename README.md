@@ -88,9 +88,9 @@ Data: 2017-08-23T00:00:00.000Z
 
   The encoding of data structures defined in ASN.1 is described in X.690. The tags,lengths,and values used in the CVC is defined in the following table.
 
-  ![](/assets/Overview_dataObject_CVC.png)
+  ![](/assets/Overview_dataObject_CVC.png)![](/assets/PublicKey_Profile.png)
 
-  * Example of CVC
+* * * * * * * Example of CVC
 
   ![](/assets/Example_RootCVC_RB.png)
 
