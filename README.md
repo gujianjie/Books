@@ -14,7 +14,7 @@ Data: 2017-08-23T00:00:00.000Z
 
 **Key Points**
 
-* Raw Public Key -&gt; CVC Certification
+* Raw Public Key -&gt; CV Certificates
 * 1-Level Signature Verification -&gt; 2-Level Signature Verification
 
 ---
@@ -80,5 +80,12 @@ Data: 2017-08-23T00:00:00.000Z
 
   ![](/assets/dynamic_transferExit_process_new.png)
 
+* **Detailed CV design**
 
+    The storage in the embedded ECUs is normally limitied, so X.509 certificates are not used, CV certificates according to ISO-7816 is used instead. The certificate profile is specified in the following table.
+  
+  
+  ![](/assets/CVC_Profile.png)
+
+ ![](/assets/Overview_dataObject_CVC.png)
 
