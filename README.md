@@ -96,7 +96,7 @@ The encoding of data structures defined in ASN.1 is described in X.690. The tags
 
 * **Example of CVC - RootCVC**
 
-![](/assets/Example_RootCVC_RB.png)
+![](/assets/RootCVC_UserCVC_Example.png)
 
 
 
