@@ -98,5 +98,3 @@ The publick key profile consists of Object Identifer, Composite modulus and Publ
 
 ![](/assets/RootCVC_UserCVC_Example.png)
 
-![](/assets/RootCVC_UserCVC_Example.png)
-
