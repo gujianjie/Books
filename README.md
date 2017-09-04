@@ -112,3 +112,10 @@ The role and authorization of the certifcate holder SHALL be encoded in the **Ce
 
 ### _Definitions in the UAES MG1U platform solution_
 
+* **Certificate Profile Identifier** is fixed as 0x00.
+* **Public Key** should be RSA2048 format. The **Public Exponent** is fixed as 0x10001.
+* The **Certificate Effective Date** should be the date when the certificate is generated. The **Certificate Expiration Date** could be defined, but might not be checked in the ECUs.
+* The **Certifcate Extensions** should not be used.
+* The **Certificate Authority Reference** and The **Cerfiticate Holder Reference**
+
+
