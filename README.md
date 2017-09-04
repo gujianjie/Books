@@ -80,7 +80,7 @@ Data: 2017-08-23T00:00:00.000Z
 
   ![](/assets/dynamic_transferExit_process_new.png)
 
-* **Detailed CV design**
+* **Detailed CVC design**
 
   The storage in the embedded ECUs is normally limitied, so X.509 certificates are not used, CV certificates according to ISO-7816 is used instead. The certificate profile is specified in the following table.
 
@@ -90,11 +90,21 @@ The encoding of data structures defined in ASN.1 is described in X.690. The tags
 
 ![](/assets/Overview_dataObject_CVC.png)
 
-The publick key profile consists of Object Identifer, Composite modulus and Public exponent.
+The data objects contained in an **RSA public key** are shown in the following table. The order of the data objects is fxed.
 
 ![](/assets/PublicKey_Profile.png)
 
-* **Example of CVC - RootCVC**
+The **Certifcation Authority Reference** is used to identify the public key to be used to verify the signature of the certifcation authority. The Certifcation Authority Reference MUST be equal to the Certifcate Holder Reference in the corresponding certifcate of the certifcation authority.
+
+The **Certifcate Holder Reference** is used to identify the public key contained in the certifcate.
+
+The role and authorization of the certifcate holder SHALL be encoded in the **Certifcate Holder Authorization Template**. This template is a sequence that consists of the following data objects:
+1. An object identifer that specifes the terminal type and the format of the template.
+2. A discretionary data object that encodes the relative authorization, i.e. the role and ****authorization of the certifcate holder relative to the certifcation authority.
+
+* **Example of RootCVC and UserCVC**
 
 ![](/assets/RootCVC_UserCVC_Example.png)
+
+* **Rules for OID**
 
