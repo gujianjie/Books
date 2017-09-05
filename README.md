@@ -117,6 +117,7 @@ The role and authorization of the certifcate holder SHALL be encoded in the **Ce
 * The **Certificate Effective Date** should be the date when the certificate is generated. The **Certificate Expiration Date** could be defined, but might not be checked in the ECUs.
 * The **Certifcate Extensions** should not be used.
 * The **Certificate Authority Reference** and The **Cerfiticate Holder Reference**
+* The **Discretionary Data** in the **Certificate Holder Authorization Template** should only occupy 1 byte. The definiton of role and access right difinition should be compatible with the following table:
 
 ![](/assets/DiscretionaryData_Role_AccessRight.png)
 
