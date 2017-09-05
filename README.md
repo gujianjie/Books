@@ -84,7 +84,7 @@ Data: 2017-08-23T00:00:00.000Z
 
 #### _Detailed CVC design_
 
-  The storage in the embedded ECUs is normally limitied, so X.509 certificates are not used, CV certificates according to ISO-7816 is used instead. The certificate profile is specified in the following table.
+The storage in the embedded ECUs is normally limitied, so X.509 certificates are not used, CV certificates according to ISO-7816 is used instead. The certificate profile is specified in the following table.
 
 ![](/assets/CVC_Profile_overview.png)
 
@@ -100,8 +100,8 @@ The **Certifcation Authority Reference** is used to identify the public key to b
 
 The **Certifcate Holder Reference** is used to identify the public key contained in the certifcate.
 
-The role and authorization of the certifcate holder SHALL be encoded in the **Certifcate Holder Authorization Template**. This template is a sequence that consists of the following data objects:
-1. An object identifer that specifes the terminal type and the format of the template.
+The role and authorization of the certifcate holder SHALL be encoded in the **Certifcate Holder Authorization Template**. This template is a sequence that consists of the following data objects:  
+1. An object identifer that specifes the terminal type and the format of the template.  
 2. A discretionary data object that encodes the relative authorization, i.e. the role and authorization of the certifcate holder relative to the certifcation authority.
 
 * **Example of RootCVC and UserCVC**
@@ -118,4 +118,5 @@ The role and authorization of the certifcate holder SHALL be encoded in the **Ce
 * The **Certifcate Extensions** should not be used.
 * The **Certificate Authority Reference** and The **Cerfiticate Holder Reference**
 
+![](/assets/DiscretionaryData_Role_AccessRigth.png)
 
