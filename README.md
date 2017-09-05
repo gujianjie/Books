@@ -116,11 +116,15 @@ The role and authorization of the certifcate holder SHALL be encoded in the **Ce
 * **Public Key** should be RSA2048 format. The **Public Exponent** is fixed as 0x10001.
 * The **Certificate Effective Date** should be the date when the certificate is generated. The **Certificate Expiration Date** could be defined, but might not be checked in the ECUs.
 * The **Certifcate Extensions** should not be used.
-* The **Certificate Authority Reference** and The **Cerfiticate Holder Reference** use the data structure in the following table. The data element will be further detailized and extended. Ojbect Id is currently not defined and checked.
+* The **Certificate Authority Reference** and The **Certificate Holder Reference** use the data structure in the following table. The data lenth is limited at 16 bytes. The data element could be further detailized and extended. Ojbect Id is currently not defined and checked.
+RootCVC is a self-signed certificate, so the Certificate Authority Reference and Certificate Holder Reference of RootCVC has the same value.
 
 ![](/assets/CertificateReference.png)
 
 * The **Discretionary Data** in the **Certificate Holder Authorization Template** should only occupy 1 byte. The definiton of role and access right difinition should be compatible with the following table:
 
 ![](/assets/DiscretionaryData_Role_AccessRight.png)
+
+* **Certificate Validation Process**
+
 
