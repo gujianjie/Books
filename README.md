@@ -118,5 +118,5 @@ The role and authorization of the certifcate holder SHALL be encoded in the **Ce
 * The **Certifcate Extensions** should not be used.
 * The **Certificate Authority Reference** and The **Cerfiticate Holder Reference**
 
-![](/assets/DiscretionaryData_Role_AccessRigth.png)
+![](/assets/DiscretionaryData_Role_AccessRight.png)
 
