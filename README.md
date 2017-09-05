@@ -129,12 +129,14 @@ The role and authorization of the certifcate holder SHALL be encoded in the **Ce
 * **SwitchOver**
 
 ---
+
 ### _eToken Request Process_
+
 * **eToken Request Form**
 
----
-### _Software Release Process_
+![](/assets/eTokenApplicationForm_cn.png)
 
+### _Software Release Process_
 
 
 
