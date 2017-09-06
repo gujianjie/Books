@@ -140,7 +140,7 @@ UserCVC should be verified according to the following process:
 ![](/assets/CVCValidationProcess.png)
 
 * **SwitchOver**
-
+The SwitchOver certificate is us
 ---
 
 ### _eToken Application Process_
