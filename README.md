@@ -144,6 +144,8 @@ UserCVC should be verified according to the following process:
 
 The SwitchOver certificate could be used for bypassing the Memlay Signature Check during the secured programming procedure. The Role in the certificate Holder Authorization Template MUST be UAES Developer. The 'SwitchOver' bit in the Access Right MUST be set. 
 
+The usage of SwitchOver certificate should by limited. It's should only be applied and issued for dedicated case with approval from Manager Level. 
+
 ---
 
 ### _eToken Application Process_
@@ -156,7 +158,6 @@ The SwitchOver certificate could be used for bypassing the Memlay Signature Chec
 
 ### _Software Release Process_
 
-TBD
 
 
 
