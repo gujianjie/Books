@@ -126,15 +126,21 @@ The role and authorization of the certifcate holder SHALL be encoded in the **Ce
 
 * **Certificate Validation Process**
 
+![](/assets/CVCValidationProcess.png)
+
 * **SwitchOver**
 
 ---
 
-### _eToken Request Process_
+### _eToken Application Process_
 
-* **eToken Request Form**
+* **eToken ApplicationForm**
 
 ![](/assets/eTokenApplicationForm_cn.png)
+
+
+
+![](/assets/eTokenApplictionProcess.png)
 
 ### _Software Release Process_
 
