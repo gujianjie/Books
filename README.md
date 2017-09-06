@@ -150,11 +150,13 @@ The usage of SwitchOver certificate should by limited. It's should only be appli
 
 ### _eToken Application Process_
 
-* **eToken ApplicationForm**
-
-![](/assets/eTokenApplicationForm_cn.png)
+SafeNet eToken5110 (Security Level: EAL4+) is used as the storage of UserCVC and UserPrivateKey. 
 
 ![](/assets/eTokenApplictionProcess.png)
+
+* **eToken ApplicationForm** (Example)
+
+![](/assets/eTokenApplicationForm_cn.png)
 
 ### _Software Release Process_
 
