@@ -126,6 +126,17 @@ The role and authorization of the certifcate holder SHALL be encoded in the **Ce
 
 * **Certificate Validation Process**
 
+UserCVC should be verified according to the following process: 
+
+* The UserCVC could be read out from the Epilog of the programmed logical block (CB/ASW/DS)
+* The CVC  is stored with ASN.1 encoding. The user should perform format-check and phrase the CVC content
+* The Certificate Profile Identifier should be check. The value MUST be 0.
+* The Certificate Authority Reference of the UserCVC should be compared with the Certificate Holder Reference of the RootCVC stored in BootCtrl
+* The rational of Role and The Access Right of the UserCVC should be checked.
+* The Signature of UserCVC should be verified with the Root PublicKey stored in the RootCVC in the BootCtrl.
+* 'Memlay Signature Check' bit of the Access Right should be set in the 'Secured Programming' scenario. The 'TSW Signature Check' bit shoud be set in the TSW downloading scenario.
+* User PublicKey can only be trusted after passing all the checks, and can only be used in the targeted scenario defined in the Access Right
+
 ![](/assets/CVCValidationProcess.png)
 
 * **SwitchOver**
@@ -137,8 +148,6 @@ The role and authorization of the certifcate holder SHALL be encoded in the **Ce
 * **eToken ApplicationForm**
 
 ![](/assets/eTokenApplicationForm_cn.png)
-
-
 
 ![](/assets/eTokenApplictionProcess.png)
 
