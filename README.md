@@ -150,7 +150,13 @@ The usage of SwitchOver certificate should by limited. It's should only be appli
 
 ### _eToken Application Process_
 
-SafeNet eToken5110 (Security Level: EAL4+) is used as the storage of UserCVC and UserPrivateKey. 
+SafeNet eToken5110 (Security Level: EAL4+) is used as the storage of UserCVC and UserPrivateKey. The  end user should apply an eToken to the KMS Operator before Software Release Process.
+
+* The End User should fill the eToken Application Form (see eToken Applicaiton Form Example)
+* The KMS Operator generate a CSR according to the eToken Application Form (with Approval from Manager), and pass it to the KMS backend
+* The KMS backend generate the User Private/Public Key pair and the UserCVC (signed with RootPrivateKey) according to the CSR.
+* The UserCVC and UserPrivateKey is injected into the eToken. The PIN is reinitialized by End User with the help of KMS operator.
+* The eToken is issued to the End User.
 
 ![](/assets/eTokenApplictionProcess.png)
 
